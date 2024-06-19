@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const { getFruitById, getFruitIncrease, getFruitDecrease, addFruit, getFruit} = require(path.join(__dirname, '../controller/userController.js'));
+const { getFruitById, getFruitIncrease, getFruitDecrease, addFruit, getFruit} = require(path.join(__dirname, '../controller/controller.js'));
 const router = express.Router();
 
 router.post("/fruit/increase", getFruitIncrease);
