@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { User, fruit} = require('../model/userModel.js');
+const { User, fruit} = require('../model/model.js');
 const mysql = require('mysql2');
 const sequelize = require('../config/database.js');
 
