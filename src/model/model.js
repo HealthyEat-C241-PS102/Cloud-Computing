@@ -78,7 +78,7 @@ const Classes = db.define('classes', {
     timestamps: false,
   });
 
-const FruitClasses = db.define('FruitClasses', {
+const FruitClasses = db.define('fruitclasses', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -127,7 +127,7 @@ Classes.sync({ force: false }).then(() => {
 FruitClasses.sync({ force: false }).then(() => {
     console.log('Tabel dan model FruitClasses sudah tersinkron!');
 }).catch((err) => {
-    console.log('Error saat sinkronisasi FruitClasses:', err);
+    console.log('Error saat sinkronisasi fruitclasses:', err);
 });
 
 fruit.belongsToMany(Classes, { through: FruitClasses, foreignKey: 'id_fruit' });
